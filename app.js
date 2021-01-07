@@ -4,18 +4,18 @@ const app = express();
 
 const setCors = require("./Middlewares/security");
 
-const usersRoutes = require("./Routes/usersRoutes");
 const indexRoute = require("./Routes/indexRoute");
 const helloRoute = require("./Routes/helloRoute");
+const usersRoutes = require("./Routes/usersRoutes");
 
 const PORT = 3000 || process.env.PORT;
 
 app.use(express.json());
 app.use(setCors);
 
+app.use("/", indexRoute);
 app.use("/hello", helloRoute)
 app.use("/users", usersRoutes);
-app.use("/", indexRoute);
 
 app.use((req, res, next) => {
   let err = new Error("route not found");

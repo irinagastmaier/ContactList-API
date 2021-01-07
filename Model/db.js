@@ -1,7 +1,7 @@
 const lowdb = require("lowdb");
 const FileSync = require("lowdb/adapters/FileSync");
-const adopter = new FileSync("./Model/db.json"); // here needs the exact path, otherwise will create the json file outside the folder.
-const db = lowdb(adopter);
+const adapter = new FileSync("./Model/db.json"); // here needs the exact path, otherwise will create the json file outside the folder.
+const db = lowdb(adapter);
 
 //const axios = require('axios');
 

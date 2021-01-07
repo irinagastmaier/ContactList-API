@@ -2,16 +2,18 @@ const express = require("express");
 
 const app = express();
 
-const setCors = require("./middlewares/security");
+const setCors = require("./Middlewares/security");
 
 const usersRoutes = require("./Routes/usersRoutes");
 const indexRoute = require("./Routes/indexRoute");
+const helloRoute = require("./Routes/helloRoute");
 
 const PORT = 3000 || process.env.PORT;
 
 app.use(express.json());
 app.use(setCors);
 
+app.use("/hello", helloRoute)
 app.use("/users", usersRoutes);
 app.use("/", indexRoute);
 

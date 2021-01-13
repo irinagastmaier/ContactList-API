@@ -10,7 +10,6 @@ const {
 } = require("../Controllers/usersController"); // here can add one by one by crtl+shift
 
 
-
 //when is targeting a specific user the path is /:id, when is all users will be /. Instead of the id, can use other variable, such as name.
 
 router.get("/:id", getSingleUser);

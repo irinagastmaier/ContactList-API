@@ -14,11 +14,13 @@ app.use(express.json());
 app.use(setCors);
 
 //template Engines
+//https://ejs.co/#install
 //npm i ejs
 //EJS Enbedded Javascript Template
-//jade known as Pug
 //handlebars
+//creating partials like a component.
 //setting view engine for app
+
 app.set("view engine", "ejs")
 //send static file from the html (css)
 app.use(express.static("public"))

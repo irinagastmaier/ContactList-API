@@ -15,8 +15,10 @@ app.use(setCors);
 
 //template Engines
 //npm i ejs
-//EJS Embedded JS Template
-//jade known as PU
+//EJS Enbedded Javascript Template
+//jade known as Pug
+//handlebars
+//setting view engine for app
 app.set("view engine", "ejs")
 //send static file from the html (css)
 app.use(express.static("public"))
